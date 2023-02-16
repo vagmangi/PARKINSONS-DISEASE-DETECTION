@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  transition: all 0.3s ease;
+}
+body{
+  height: 100vh;;
+  width: 100%;
+  display: flex;
+  background-image: linear-gradient( 135deg, #D09CFA  10%, #A555EC 100%);
+}
+::selection{
+  color: #f2f2f2;
+  background: #A555EC;
+}
+body::before,
+body::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+body::before{
+  clip-path: circle(30% at left 20%);
+  opacity: 0.4;
+  background-image: linear-gradient( 135deg, #A555EC 10%, #D09CFA 100%);
+}
+body::after{
+  opacity: 0.4;
+  clip-path: circle(25% at right 80%);
+  background-image: linear-gradient( 135deg, #A555EC 10%, #D09CFA 100%);
+}
+header{
+  height: 85vh;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 12;
+  border-radius: 25px;
+  margin: auto;
+  position: relative;
+}
+header .navbar{
+  margin: auto;
+  width: 100%;
+  padding: 35px 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .menu{
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar .logo a{
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+  font-weight: 500;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 50px;
+}
+.navbar .menu a{
+  color: #000;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.navbar .menu a:hover{
+  color: #FFFFD0;
+}
+
+ header .text-content{
+   width: 40%;
+   margin: 150px 0 0 50px ;
+ }
+.text-content h2{
+  font-size: 27px;
+  font-weight: 600;
+}
+.text-content p{
+  font-size: 15px;
+  margin-top: 10px;
+}
+@media (max-width:850px) {
+  header .navbar{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+  }
+  .navbar .menu {
+    margin: 10px 0 20px 0;
+  }
+  header .text-content{
+    margin: 30px 0 0 20px ;
+    width: 70%;
+  }
+  header .text-content h2{
+    font-size: 20px;
+  }
+}
+@media (max-width:410px) {
+  header{
+    height: 100vh;
+    width: 100%;
+    border-radius: 0px;
+  }
+  header .navbar{
+    padding: 15px 10px;
+}
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  height:100%;
+  padding: 25px 30px;
+  border-radius: 25px;
+}
+.container .heading{
+  font-size: 35px;
+  font-weight: 500;
+  font-style:inherit;
+  position: relative;
+  top:0px;
+  right:-290px;
+  padding:0 0 20px; 
+  text-decoration: underline; 
+}
+.container .heading::before{
+  content: " ";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 100%;  
+}
+
+.container form .card-details{
+  margin: 0px -200px 3px 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between ;
+
+}
+form .card-details .card-box{
+  /* width: calc(100% / 3.9 - 20px); */
+  width:26%;
+
+  
+}
+
+.details{
+  text-decoration: underline;
+  text-align: center;
+  font-size: small;
+  font-style:inherit;
+}
+.card-details .card-box .details{
+  display:block;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.card-details .card-box input{
+  height:32px;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: left 45px; 
+  font-size: 16px;
+  border-bottom-width:2px ;
+  transition: all 0.3s ease;
+}
+.card-details .card-box input:focus,
+.card-details .card-box input:valid{
+  border-color:#A555EC;
+
+}
+form .Button{
+  text-align: center;
+  position: absolute;
+  right:465px;
+  bottom:-40px;
+
+}
+form .Button input{
+  padding: 1px 100px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color:#A555EC;
+  text-align: center;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.Button:hover{
+  transform: scale(1.3);
+}
+
+::placeholder {
+  color:#A555EC;
+  opacity: 1; /* Firefox */
+}
+
